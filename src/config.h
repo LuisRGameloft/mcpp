@@ -140,7 +140,7 @@
 #define HOST_CMP_NAME "GCC"
 
 /* Define the host compiler. */
-#define HOST_COMPILER GNUC
+#define HOST_COMPILER MSC
 
 /* Define the host system. */
 #define HOST_SYSTEM SYS_MINGW

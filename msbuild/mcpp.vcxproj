@@ -33,22 +33,22 @@
     <TargetName Condition="'$(RuntimeLibrary)' == 'MultiThreaded'">mcppmt</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>$(DefaultPlatformToolset)</PlatformToolset>
   </PropertyGroup>
@@ -60,7 +60,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x600;WIN32_LEAN_AND_MEAN;_CONSOLE</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x600;WIN32_LEAN_AND_MEAN;_CONSOLE;HAVE_CONFIG_H</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4244;4246;4267;4146;4018</DisableSpecificWarnings>
       <RuntimeLibrary>$(RuntimeLibrary)</RuntimeLibrary>
@@ -100,21 +100,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\directive.c" />
-    <ClCompile Include="..\eval.c" />
-    <ClCompile Include="..\expand.c" />
-    <ClCompile Include="..\main.c" />
-    <ClCompile Include="..\mbchar.c" />
-    <ClCompile Include="..\support.c" />
-    <ClCompile Include="..\system.c" />
+    <ClCompile Include="..\src\directive.c" />
+    <ClCompile Include="..\src\eval.c" />
+    <ClCompile Include="..\src\expand.c" />
+    <ClCompile Include="..\src\main.c" />
+    <ClCompile Include="..\src\mbchar.c" />
+    <ClCompile Include="..\src\support.c" />
+    <ClCompile Include="..\src\system.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\config.h" />
-    <ClInclude Include="..\configed.H" />
-    <ClInclude Include="..\internal.H" />
-    <ClInclude Include="..\mcpp_lib.h" />
-    <ClInclude Include="..\mcpp_out.h" />
-    <ClInclude Include="..\system.H" />
+    <ClInclude Include="..\src\config.h" />
+    <ClInclude Include="..\src\configed.H" />
+    <ClInclude Include="..\src\internal.H" />
+    <ClInclude Include="..\src\mcpp_lib.h" />
+    <ClInclude Include="..\src\mcpp_out.h" />
+    <ClInclude Include="..\src\system.H" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
 </Project>
