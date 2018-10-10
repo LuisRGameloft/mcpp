@@ -137,13 +137,13 @@
 /* #undef HAVE_UNISTD_H_ */
 
 /* Define the host compiler name. */
-#define HOST_CMP_NAME "GCC"
+#define HOST_CMP_NAME "MVC"
 
 /* Define the host compiler. */
 #define HOST_COMPILER MSC
 
 /* Define the host system. */
-#define HOST_SYSTEM SYS_MINGW
+#define HOST_SYSTEM SYS_WIN32
 
 /* Define include directory to install mcpp_g*.h header files. */
 /* #undef INC_DIR */
@@ -206,7 +206,7 @@
 /* #undef STD_LINE_PREFIX */
 
 /* Define the target system. */
-#define SYSTEM SYS_MINGW
+#define SYSTEM SYS_WIN32
 
 /* Define the version of FreeBSD. */
 /* #undef SYSTEM_EXT_VAL */
